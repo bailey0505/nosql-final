@@ -1,0 +1,43 @@
+<div class="resumePage" style="width: 100%; height: 100%; background-color: #D3D3D3;" data-aos="fade-in">
+    <div class="row">
+        <img src="/bailey.jpg" class="rounded float-left" /> 
+    </div>
+    <div class="row" style="margin-top: 2%;"> 
+        <div class="col-md-6 col-xs-12">
+            <div class="card" style="font-family: 'Solway', serif;">
+              <div class="card-header" style="background-color: #000000; color: white;">
+			  <!--
+				   job_title : JobTitle,
+					job_compasny : JobCompany,
+					job_time : JobTime,
+					job_duties : JobDuties,
+					college_name : CollegeName,
+					start_date : StartDate, 
+					end_date : EndDate,
+			  
+			  -->
+                <h4>Current Job</h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Company: {{ job_compasny }}</h5>
+				<h5 class="card-title">Job Title: {{ job_title }}</h5>
+				<h5 class="card-title">Time Ive been there: {{ job_time }}</h5>
+				<h5 class="card-title">Duties{{ job_duties }}</h5>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+              <div class="card" style="font-family: 'Solway', serif;">
+              <div class="card-header" style="background-color: #000000; color: white;">
+                <h4>School</h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">School Name: {{ college_name }}</h5>
+				 <h5 class="card-title">Started:  {{ start_date }}</h5>
+				  <h5 class="card-title">Will be finished: {{ end_date }}</h5>
+               
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

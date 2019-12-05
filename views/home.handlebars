@@ -1,0 +1,63 @@
+<div class="homepage" style="text-align: center; font-family: 'Solway', serif !important;">
+	{{#if success}}
+		<div class="alert alert-success" role="alert">
+			{{ success }}
+		</div>
+	{{/if}}
+	
+	<!---
+			success : req.session.success,
+			header_text : header,
+			headertwo_text : headertwo,
+			apiTitle_text : apiTitle,
+			apiPara_text : apiPara,
+			resumeTitle_text : resumetitle,
+			resumePara_text : resumePara,
+			formTitle_text : formTitle,
+			formPara_text : formpara,
+	
+	
+	-->
+	
+	
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<h1>{{ header_text }}</h1> 
+		</div>s
+		<div class="col-md-12 col-xs-12">
+			<h5>{{ headertwo_text }}</h5> 
+		</div>
+	</div>
+	<div class="row" style="color: white;">
+		<div class="col-md-4 col-xs-12" style="">
+			<div class="card" style="width: 100%; background-color: #000000;">
+				<img src="/webservice.PNG" class="card-img-top" alt="Web Service Page" style="height: 350px;">
+				<div class="card-body">
+					<h5 class="card-title">{{ apiTitle_text }}</h5>
+					<p class="card-text">{{ apiPara_text }}</p>
+					<a href="/webservice" class="btn btn-primary">Visit Page</a>
+				</div>
+			</div>
+		</div> 
+		<div class="col-md-4 col-xs-12">
+			<div class="card" style="width: 100%; background-color: #000000;">
+				<img src="/resumepage.PNG" class="card-img-top" alt="Resume Page" style="height: 350px;">
+				<div class="card-body">
+					<h5 class="card-title">{{ resumeTitle_text }}</h5>
+					<p class="card-text">{{ resumePara_text }}</p>
+					<a href="/resume" class="btn btn-primary">Visit Page</a>
+				</div>
+			</div>
+		</div> 
+		<div class="col-md-4 col-xs-12">
+			<div class="card" style="width: 100%; background-color: #000000;">
+				<img src="/formpage.PNG" class="card-img-top" alt="Form Page" style="height: 350px;">
+				<div class="card-body">
+					<h5 class="card-title">{{ formTitle_text }}</h5>
+					<p class="card-text">{{ formPara_text }}</p>
+					<a href="/form" class="btn btn-primary">Visit Page</a>
+				</div>
+			</div>
+		</div> 
+	</div> 
+</div>

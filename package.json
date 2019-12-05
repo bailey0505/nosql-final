@@ -1,0 +1,15 @@
+{
+  "name": "nosql-final",
+  "version": "1.0.0",
+  "description": "Final Project for Nosql Class ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Bailey Rotellini",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express-session": "^1.17.0"
+  }
+}

@@ -1,0 +1,91 @@
+<style> 
+    .webpage {
+            background-image : url(/nasa.jpg) !important; 
+        height: 20000%;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    }
+    
+    .header-text {
+        text-align: center;
+        color : white;
+    }
+    
+</style>
+<div id="webpage" class="webpage" style="font-family: 'Solway', serif !important;">
+    
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    
+    <div class="header-text">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h1>NASA API Page</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h3>Asteroids - NeoWs</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <p>NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid information. With NeoWs a user can: search for Asteroids based on their closest approach date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse the overall data-set.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h4> Enter A start Date and end date and get some data from objects on these dates</h4>
+                <p>MAKE SURE THE REQUEST IS ONLY A WEEK IN LENGTH OR YOU WILL ERROR!</p>
+            </div>
+        </div>
+        <form id="getobj" name="getobj" action="/getobj" method="POST">
+            <div class="row">
+                <div class="col-md-3 col-xs-0"></div>
+                <div class="col-md-3 col-xs-12"> 
+                  <input class="datepicker" data-date-format="yyyy/mm/dd" id="start" name="start" placeholder="Start Date" style="width: 100%;">
+                </div>
+                <div class="col-md-3 col-xs-12"> 
+                  <input class="datepicker" data-date-format="yyyy/mm/dd" id="end" name="end" placeholder="End Date" style="width: 100%;">
+                </div>
+                 <div class="col-md-3 col-xs-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <button type="submit" value="submit" class="btn btn-outline-light" style="margin-top: 5px;">Submit!</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h3>Here are a couple of NeoW objects that where reported from earth!</h3>
+            </div>
+            <div class="col-md-12 col-xs-12">
+                {{ obj1 }}
+            </div>
+            <div class="col-md-12 col-xs-12">
+                {{ obj2 }}
+            </div>
+            <div class="col-md-12 col-xs-12">
+                {{ obj3 }}
+            </div>
+            <div class="col-md-12 col-xs-12">
+                {{ obj4 }}
+            </div>
+         </div>
+    </div>
+    <script type="text/javascript">
+         $('.datepicker').datepicker({
+             format: 'yyyy/mm/dd',
+            startDate: '-3d'
+         });
+    </script>
+</div>
+       
+    
+
+
+
